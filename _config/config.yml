@@ -1,0 +1,16 @@
+---
+Name: s2hub-textassistant-config
+After:
+  - '*'
+---
+SilverStripe\Forms\FormField:
+  extensions:
+    - S2Hub\TextAssistant\Extensions\FormFieldExtension
+
+SilverStripe\ORM\DataObject:
+  extensions:
+    - S2Hub\TextAssistant\Extensions\DataObjectTranslationActionExtension
+
+SilverStripe\Admin\LeftAndMain:
+  extensions:
+    - S2Hub\TextAssistant\Extensions\LeftAndMainExtension

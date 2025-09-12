@@ -1,0 +1,134 @@
+.field.translatabledataobject {
+	@media only screen and (max-width: 1400px) {
+		&.htmleditor .locale-tabs {
+			top: -31px;
+			right: calc(16.6666667% - 105px);
+		}
+	}
+	
+	@media only screen and (max-width: 1200px) {
+		&.htmleditor .locale-tabs {
+			top: 5px;
+			right: 5px;
+		}
+	}
+	
+	@media only screen and (max-width: 991px) {
+		&.htmleditor .locale-tabs {
+			top: -31px;
+		}
+	}
+}
+
+.translatabledataobjectfield {
+	position: relative !important;
+
+	.locale-tabs {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 10;
+		min-height: 16px;
+		transform: translateX(100%);
+		
+		
+		ul {
+			border-bottom: 0 !important;
+			margin-bottom: 0 !important;
+			position: relative;
+			margin-left: 30px;
+			
+			&:before {
+				position: absolute;
+				left: -20px;
+				top: 6px;
+				color: #566b8d;
+			}
+			
+			li {
+				a {
+					padding: 5px !important;
+					line-height: 12px !important;
+					font-size: 13px;
+				}
+			}
+		}
+	}
+
+	.form-group {
+		margin-bottom: 0;
+
+		&:after {
+			display: none;
+		}
+
+		.form__field-holder {
+			margin-left: 0;
+			left: 0;
+		}
+	}
+
+	@media only screen and (max-width: 1200px) {
+		.locale-tabs {
+			top: 2px;
+			right: 5px;
+			transform: none;
+		}
+	}
+	
+	@media only screen and (max-width: 991px) {
+		.locale-tabs {
+			top: -31px;
+		}
+	}
+
+	.modal .modal-dialog .modal-content & {
+		.locale-tabs {
+			top: -31px;
+			right: 5px;
+			transform: none;
+		}
+	}
+}
+
+.grid-field.ss-gridfield-editable > table > tbody > tr.ss-gridfield-item > td > .translatabledataobjectfield {
+	.locale-tabs {
+		transform: none;
+	}
+	.form-group {
+		.form__field-holder {
+			width: 100% !important;
+			max-width: 100% !important;
+			flex-basis: 100% !important;
+		}
+	}
+}
+
+.translatabledataobjectgroup {
+	margin: 0 0 8px 0;
+	padding: 0 0 7px 0;
+	
+	.LocaleGroupItemRow {
+		line-height: 20px;
+		min-height: 20px;
+		margin-bottom: 5px;
+	}
+	
+	.LocaleGroupItemRow-remove {
+		background-position: -80px -128px;
+		display: inline-block;
+		line-height: 20px;
+		vertical-align: top;
+		cursor: pointer;
+	}
+}		
+
+.field.locale-restrictions {
+	.optionset.locale-restrictions {
+		display: flex;
+
+		.checkbox.form-check {
+			margin-right: 1rem;
+		}
+	}
+}

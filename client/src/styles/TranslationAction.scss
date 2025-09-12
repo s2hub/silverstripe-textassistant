@@ -1,0 +1,85 @@
+// This CSS is only used in TranslationAction CMSFields
+
+.togglecomposite {
+    
+    .form__fieldgroup {
+        padding: 0 !important;
+    }
+
+    .translation-action-from-value-container {
+        padding-left: 1.5385rem !important;
+    }
+}
+
+form[data-class="S2Hub-TextAssistant-Models-TranslationAction"],
+.TranslationActionContainerObject {
+
+    .translation-information-container {
+        display: flex;
+        gap: 1.5385rem;
+        
+
+        .translation-information-table {
+            margin-left: 1.5385rem;
+            
+            
+            td {
+                padding: 5px 15px;
+                background: white;
+                border: 1px solid #dbe0e9;
+            }
+        }
+
+    }
+
+    .locale-tabs {
+        -webkit-transform: translateX(0%) !important;
+        -o-transform: translateX(0%) !important;
+        transform: translateX(0%) !important;
+    }
+
+    .translationGroup {
+        background: unset !important;
+        border: unset !important;
+        padding: unset !important;
+        border-radius: unset !important;
+    }
+
+    .html-editor-field-other-locale {
+        margin-top: 70px;
+
+    }
+}
+
+
+@media(min-width: 1200px) {
+
+    .translation-action-container {
+
+        .form__fieldgroup {
+            margin: 0 !important;
+            
+            max-width: 100% !important;
+            flex: 0 0 100% !important;
+        }
+
+    }
+
+    .translation-action-from-value-container, .translation-action-to-value-container {
+        
+        float: left;
+        margin: 0 !important;
+        width: 50%;
+        
+        .form__fieldgroup {
+            
+            margin: 0 !important;
+            
+            max-width: 100% !important;
+            flex: 0 0 100% !important;
+            
+        }
+        
+    }
+    
+}

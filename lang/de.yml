@@ -1,0 +1,71 @@
+de:
+  S2Hub\TextAssistant\Extensions\FormFieldExtension:
+    TRANSLATE: 'Übersetzen'
+    TRANSLATEFROM: 'Übersetzen von'
+    TRANSLATETO: 'Übersetzen '
+    CONTENT: 'Text'
+    GENERATE: 'Generieren'
+    OK: 'Text benutzen'
+    SUMMARIZECONTENT: 'Fassen Sie den Inhalt des Feldes zusammen "{field}"'
+    GENERATECONTENTFROMTITLE: 'Text anhand des Titels generieren "{title}"'
+    GENERATECONTENTFROMTITLEANDSHORTDESC: 'Text anhand des Titels generieren "{title}" und kurze Beschreibung'
+    WORDCOUNT: 'Anzahl der Wörter'
+    TRANSLATED_VIA_AI: "Dieser Text wurde über KI übersetzt."
+    CLOSE: "Schließen"
+  S2Hub\TextAssistant\Forms\BatchActions_TranslateForm:
+    TITLE: "Mit KI übersetzen"
+    STARTTRANSLATION: "Übersetzung starten"
+    SITESETTINGS: "Einstellungen der Seite"
+    TRANSLATEFROM: "Übersetzen von"
+    TRANSLATETO: "Übersetzen in"
+  S2Hub\TextAssistant\Forms\TranslationAdminInformationField:
+    READY_TRANSLATIONS: "Fertig übersetzt"
+    ITEMS_WAITING: "Übersetzungen die auf veröffentlichung warten"
+  S2Hub\TextAssistant\Controllers\TranslationAdmin:
+    MENUTITLE: "Übersetzungen"
+  S2Hub\TextAssistant\BatchActions\CMSBatchAction_Translate:
+    TITLE: "Mit KI übersetzten"
+  S2Hub\TextAssistant\Models\TranslateFilter:
+    SINGULARNAME: "Filter für Übersetzung"
+    PLURALNAME: "Filter für Übersetzungen"
+    CHANGETO: "Text ändern in"
+    TYPE: "Typ"
+    ACTION: "Aktion"
+    TYPE_CHANGE: "Text ändern"
+    TYPE_DONTTRANSLATE: "Nicht übersetzen"
+  S2Hub\TextAssistant\Models\TranslationAction:
+    TYPE: "Typ"
+    TYPE_GENERATED: "Generiert"
+    SINGULARNAME: "Übersetzt"
+    PLURALNAME: "Durchgeführte Übersetzungen"
+    LOCALE: "Sprache"
+    SINGULARNAME_ADJECTIVE: "Übersetzt am"
+    CREATOR: "Durchgeführt von"
+  S2Hub\TextAssistant\Forms\GridField\TranslationActionContainerObjectItemRequest:
+    PUBLISH: "Veröffentlichen"
+    PUBLISH_MESSAGE: "{Name} veröffentlichen"
+  S2Hub\TextAssistant\Forms\GridField\BulkManager\TranslationActionContainerObjectPublishHandler:
+    TITLE: "Veröffentlichen"
+  S2Hub\TextAssistant\Forms\GridField\TranslationAdminInstructionsButton:
+    INSTRUCTIONS: "Anleitungen"
+    STEP_1: "Dieser Leitfaden zeigt ihnen wie man Seiten mit KI übersetzt.<br><br>In diesem Modus, müssen Sie nur \"Weiter\" drücken um durch den Leitfaden zu gehen.<br/><br/>Wenn Sie die Einführung abbrechen wollen, können Sie zur jeder Zeit ESC drücken oder das Kreuz in der oberen rechten Ecke."
+    STEP_2: "Als erstes navigieren Sie zu \"Seiten\".<br/><br/>Drücken Sie \"Weiter\" um fortzufahren."
+    STEP_3: "Der nächste Schritt ist es \"Batch-Aktionen\" zu drücken. Mit diesem Knopf können Sie eine Aktion schnell auf mehreren Seiten ausführen.<br/><br/>Drücken Sie \"Weiter\" um fortzufahren."
+    STEP_4: "Wählen Sie in diesem Dropdown-Menü \"Mit KI übersetzen\" aus. In diesm Leitfaden haben wir das schon automatisch für Sie gemacht.<br/><br/>Drücken Sie \"Weiter\" um fortzufahren."
+    STEP_5: "Wählen Sie jetzt alle Seiten aus, die Sie übersetzen möchten.<br/>In diesem Beispiel haben wir die erste Seite automatisch ausgewählt. <br/><br/>Drücken Sie \"Weiter\" um fortzufahren."
+    STEP_6: "Wenn Sie die gewünschten Seiten zum übersetzen ausgewählt haben, drücken Sie hier."
+    STEP_7: "Sie sehen jetzt das Fenster, wo Sie auswählen können, was Sie übersetzen möchten. Dieses Fenster gibt ihn auch eine Übersicht darüber was übersetzt wird."
+    STEP_8: "Hier wählen Sie aus welche Sprache als Basis für die Übersetzung benutzt wird und in welche Sprache es übersetzt werden soll. Wir Empfehlen Ihnen bei \"Übersetzt von\" eine Sprache auszuwählen die am besten für Sie geeignet ist."
+    STEP_9: "Hier sehen Sie das die Seite übersetzt wird.</br></br>Sie haben die Entscheidung ob die Blöcke übersetzt werden sollen oder nicht.</br></br>Einige Seiten haben hier vielleicht zusätzliche Optionen, wir empfehlen Ihnen daher sorgfälltig durch die Auswahlmöglichkeiten die Sie hier treffen können zu gehen. Standardmäßig werden die Blöcke immer übersetzt.</br></br>Alle Seiten die Sie am Anfang ausgewählt haben werden hier aufgelistet."
+    STEP_10: "Nachdem Sie Ihre Entscheidungen getroffen haben, können sie das Übersetzen starten, indem Sie hier drücken.<br/><br/>Nachdem Sie die Schaltfläche gedrückt haben, startet im Hintergrund ein Prozess, der die Seite übersetzt und Sie automatisch zu \"Übersetzungen\" leitet wo Sie den aktuellen Status sehen können. Während der Prozess im Hintergrund läuft, können sie das Admin-Tool wie gewohnt weiter verwenden.<br/><br/>Drücken Sie \"Weiter\" um fortzufahren."
+    STEP_11: "Übersetzungen die fertig sind werden nicht automatisch veröffentlicht, sondern in einer Liste bei \"Übersetzungen\" hinzugefügt. Dort können Sie nochmal alles überprüfen oder eine Änderung vornehmen wenn nötig. Anschließend können Sie es veröffentlichen.<br/><br/>Dies war der letzte Schritt in dem Leitfaden. Drücken Sie \"Schließen\" zum beenden und um das Admin-Tool wie gewohnt wieder verwenden zu können."
+    NEXT: "Weiter"
+    DONE: "Schließen"
+  S2Hub\TextAssistant\Models\TextAssistantSettings:
+    SINGULARNAME: "Einstellung"
+    PLURALNAME: "Einstellungen"
+    CONTEXTFORAI: "Kontext für KI"
+    CONTEXTFORAI_RIGHTTITLE: "Dieser Text wird verwendet, um der KI Kontext zu geben und bessere Übersetzungen zu ermöglichen. Gib eine kurze Beschreibung deines Unternehmens sowie der angebotenen Produkte und Dienstleistungen."
+  S2Hub\TextAssistant\Models\TextAssistantSettings:
+    SINGULARNAME: 'Einstellungen'
+    PLURALNAME: 'Einstellungen'

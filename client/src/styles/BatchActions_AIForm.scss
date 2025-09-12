@@ -1,0 +1,71 @@
+
+
+.batchactions_translateform {
+
+    .panel {
+        // background: #dbdbdb;
+    }
+
+    
+    .page-container {
+        background: #FFF;
+        border: 1px solid #ced5e1;
+        display: block;
+        margin: 10px 0px;
+        padding: 0;
+        overflow: hidden;
+        border-left: 3px solid #ced5e1;
+
+        .indent {
+            margin-left: 40px;
+            margin-top: -13px;
+        }
+
+        &:after {
+            display: none;
+        }
+
+        > .form__fieldgroup {
+            margin: 0;
+            max-width: 100% !important;
+            padding:0 !important;
+
+        }
+
+        .page-title {
+            padding: 10px 15px;
+            font-size: 16px;
+            border-bottom: 1px solid #e5e7ec;
+            display: flex;
+
+            .icon {
+                min-width: 16px;
+
+                .menu__icon {
+                    font-size: 18px;
+                    margin-top: 1px;
+                }
+            }
+            
+            .title {
+                padding-left: 10px;
+            }
+        }
+
+        .options-container {
+            
+            &:after {
+                display: none !important;
+            }
+            .form__fieldgroup {
+                padding-top: 7px;
+                margin-left: 40px !important;
+                padding-bottom: 4px;
+            }
+            
+
+        }
+
+    }
+
+}

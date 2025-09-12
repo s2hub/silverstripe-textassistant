@@ -1,0 +1,105 @@
+sv:
+  S2Hub\TextAssistant\Extensions\FormFieldExtension:
+    TRANSLATE: 'Översätt'
+    TRANSLATEFROM: 'Översätt från'
+    TRANSLATETO: 'Översätt till'
+    CONTENT: 'Text'
+    GENERATE: 'Generera'
+    OK: 'Använd text'
+    SUMMARIZECONTENT: 'Summera texten från fältet "{field}"'
+    GENERATECONTENTFROMTITLE: 'Generera text baserat på rubriken "{title}"'
+    GENERATECONTENTFROMTITLEANDSHORTDESC: 'Generera text baserat på rubriken "{title}" och korta beskrivningen'
+    WORDCOUNT: 'Antal ord'
+    TRANSLATED_VIA_AI: "Denna text översattes med AI."
+    CLOSE: "Stäng"
+  S2Hub\TextAssistant\Forms\GridField\BulkManager\DataObjectTranslationHandler:
+    TITLE: "Översätt med AI"
+    FROMLOCALE: "Från språk"
+    TOLOCALE: "Till språk"
+    ERROR_SAMELOCALE: "Kan inte översätta till samma språk"
+    ERROR_MUSTFROMTO: "Du måste välja både från och till språk"
+  S2Hub\TextAssistant\Jobs\DataObjectTranslationHandlerJob:
+    TITLE: "Översätter..."
+  S2Hub\TextAssistant\Jobs\FluentTranslationHandlerJob:
+    TITLE: "Översätter..."
+  S2Hub\TextAssistant\Models\TranslationAction:
+    FROMTOLOCALE: "Från/Till"
+    TYPE: "Typ"
+    TYPE_GENERATED: "Översatt med AI"
+    TYPE_MANUAL: "Manuellt översatt"
+    NAME: "Namn"
+    SINGULARNAME: "Översättning"
+    PLURALNAME: "Översättningar"
+    FIELDNAMETRANSLATION: "Fält"
+    LOCALE: "Språk"
+    LOCALENICE: "Språk"
+    STATUSNICE: "Status"
+    STATUS_ACCEPTED: "Godkänd"
+    STATUS_REJECTED: "Förkastad"
+    STATUS_DRAFT: "Förslag"
+    SINGULARNAME_ADJECTIVE: "Översatt"
+    CREATOR: "Skapad av"
+  S2Hub\TextAssistant\Controllers\TranslationAdmin:
+    MENUTITLE: "Översättningar"
+  S2Hub\TextAssistant\Forms\GridField\TranslationActionContainerObjectItemRequest:
+    PUBLISH: "Publicera"
+    PUBLISH_MESSAGE: "Publicerade {Name}"
+  S2Hub\TextAssistant\Forms\GridField\BulkManager\TranslationActionContainerObjectPublishHandler:
+    TITLE: "Publicera"
+    MESSAGE: "Publicerade {Count} saker."
+  S2Hub\TextAssistant\Forms\GridField\BulkManager\TranslationActionContainerObjectSendToProofReader:
+    TITLE: "Skicka till korrektur"
+    MESSAGE: "Skickade {Count} saker till korrekturläsning."
+  S2Hub\TextAssistant\BatchActions\CMSBatchAction_Translate:
+    TITLE: "Översätt med AI"
+  S2Hub\TextAssistant\Forms\GridField\BulkManager\FluentObjectTranslationHandler:
+    TITLE: "Översätt med AI"
+    FROMLOCALE: "Från språk"
+  S2Hub\TextAssistant\Forms\TranslationAdminInformationField:
+    READY_TRANSLATIONS: "Färdiga översättningar"
+    ITEMS_WAITING: "Artiklar som väntar på publicering"
+  S2Hub\TextAssistant\Forms\BatchActions_TranslateForm:
+    TITLE: "Översätt med AI - Alternativ"
+    STARTTRANSLATION: "Starta översättning"
+    STARTED: "Översättningarna har startats"
+    SITESETTINGS: "Sidinställningar"
+    TRANSLATEFROM: "Översätt från"
+    TRANSLATETO: "Översätt till"
+    SAMELOCALE: "Kan inte översätta till samma språk"
+    NOIDS: "Inga sidor valda"
+  S2Hub\TextAssistant\ORM\TranslationRelation:
+    PIECES: "st"
+  S2Hub\TextAssistant\Models\TranslateFilter:
+    SINGULARNAME: "Översättningsfilter"
+    PLURALNAME: "Översättningsfilter"
+    TEXT: "Text"
+    CHANGETO: "Texten ska ändras till"
+    TYPE: "Typ"
+    ACTION: "Handling"
+    TYPE_CHANGE: "Ändra texten till"
+    TYPE_DONTTRANSLATE: "Översätt inte texten"
+    TEXT_REQUIRED: "Text är obligatoriskt"
+    CHANGETO_REQUIRED: "\"Texten ska ändras till\" är obligatoriskt"
+  S2Hub\TextAssistant\Forms\GridField\TranslationAdminInstructionsButton:
+    INSTRUCTIONS: "Instruktioner"
+    STEP_1: "Denna guide kommer vägleda dig genom hur du översätter sidor med AI.<br><br>I detta läge behöver du endast trycka på \"Nästa\" för att gå igenom guiden.<br/><br/>Om du vill avbryta guiden kan du trycka på ESC när som helst eller krysset upp i högra kanten av rutan."
+    STEP_2: "Först måste vi navigera till \"Sidor\".<br/><br/>Tryck på \"Nästa\" för att fortsätta."
+    STEP_3: "Nästa steg är att trycka på \"Åtgärder\". Med denna knapp kan man utföra en åtgärd på många sidor snabbt. </br></br>Tryck på \"Nästa\" för att fortsätta."
+    STEP_4: "I denna rullgardinsmeny välj \"Översätt med AI\". I guiden har vi valt detta automatiskt för dig.<br/><br>Tryck på \"Nästa\" för att fortsätta."
+    STEP_5: "Nu kan man kryssa i alla sidor man vill översätta.<br/>I detta exempel kryssar vi i första sidan automatiskt. </br></br>Tryck på \"Nästa\" för att fortsätta."
+    STEP_6: "Då man har valt sidorna man vill översätta så är nästa steg att trycka här."
+    STEP_7: "En ruta öppnas nu där du får göra val över vad du vill översätta, denna ruta ger dig även en överblick över vad som kommer översättas."
+    STEP_8: "Här får du välja vilket språk som ska användas för grund för översättningen samt till vilket språk det ska översättas till. Vi rekommenderar att ni på \"Översätt från\" väljer det språk ni har bäst material på."
+    STEP_9: "Här visas det att denna sida kommer att översättas.</br></br>Du får själv göra valet ifall blocken ska översättas eller inte.</br></br>Vissa sidor kan ha extra alternativ här utöver blocken, så vi rekommendarar ni ser noga igenom valen som kan finnas här. Som standard är det alltid ikryssat att blocken ska översättas.</br></br>Alla sidor ni har kryssat i tidigare så kommer visas här."
+    STEP_10: "Slutligen då du har gjort dina val kan ni påbörja översättningen genom att trycka här.<br/><br/>Då du trycker här så startas en bakgrundsprocess som översätter sidorna, och du blir omdirigerad automatiskt till \"Översättningar\" där du får se status på detta.<br/><br/>Medan denna bakgrundsprocess pågår så kan du fortsätta använda admin-verktyget som vanligt.</br></br>Tryck på \"Nästa\" för att fortsätta."
+    STEP_11: "Översättningar som blir klara publiceras inte automatiskt, utan de läggs till i listan i \"Översättningar\". Där kan du granska, ändra vid behov, och slutligen publicera dem.<br/><br/>Detta är sista steget i guiden och då du trycker på \"Stäng\" så kommer den avslutas och du kan fortsätta använda admin-verktyget som vanligt."
+    NEXT: "Nästa"
+    DONE: "Stäng"
+  S2Hub\TextAssistant\Models\TextAssistantSettings:
+    SINGULARNAME: "Inställningar"
+    PLURALNAME: "Inställningar"
+    CONTEXTFORAI: "Hjälp kontext till AI"
+    CONTEXTFORAI_RIGHTTITLE: "Den här texten används för att ge AI:n kontext och hjälpa den skapa bättre översättningar. Skriv en kort beskrivning av ditt företag och vilka produkter och tjänster ni erbjuder."
+  S2Hub\TextAssistant\Models\TextAssistantSettings:
+    SINGULARNAME: 'Inställningar'
+    PLURALNAME: 'Inställningar'

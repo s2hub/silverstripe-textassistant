@@ -1,0 +1,105 @@
+fi:
+  S2Hub\TextAssistant\Extensions\FormFieldExtension:
+    TRANSLATE: 'Käännä'
+    TRANSLATEFROM: 'Käännä kielestä'
+    TRANSLATETO: 'Käännä kielelle'
+    CONTENT: 'Teksti'
+    GENERATE: 'Generoi'
+    OK: 'Käytä teksti'
+    SUMMARIZECONTENT: 'Tiivistä kentän "{field}" teksti'
+    GENERATECONTENTFROMTITLE: 'Generoi teksti otsikosta "{title}"'
+    GENERATECONTENTFROMTITLEANDSHORTDESC: 'Luo teksti otsikon "{title}" ja lyhyen kuvauksen perusteella'
+    WORDCOUNT: 'Sanamäärä'
+    TRANSLATED_VIA_AI: "Tämä teksti käännettiin AI:lla."
+    CLOSE: "Sulje"
+  S2Hub\TextAssistant\Forms\GridField\BulkManager\DataObjectTranslationHandler:
+    TITLE: "Käännä tekoälyllä"
+    FROMLOCALE: "Kielestä"
+    TOLOCALE: "Kielelle"
+    ERROR_SAMELOCALE: "Ei voi kääntää samaan kieleen"
+    ERROR_MUSTFROMTO: "Valitse sekä kielestä että kielelle"
+  S2Hub\TextAssistant\Jobs\DataObjectTranslationHandlerJob:
+    TITLE: "Kääntää..."
+  S2Hub\TextAssistant\Jobs\FluentTranslationHandlerJob:
+    TITLE: "Kääntää..."
+  S2Hub\TextAssistant\Models\TranslationAction:
+    FROMTOLOCALE: "Alkaen/Kohde"
+    TYPE: "Tyyppi"
+    TYPE_GENERATED: "Käännetty AI:lla"
+    TYPE_MANUAL: "Manuaalisesti käännetty"
+    NAME: "Nimi"
+    SINGULARNAME: "Käännös"
+    PLURALNAME: "Käännökset"
+    FIELDNAMETRANSLATION: "Kenttä"
+    LOCALE: "Kieli"
+    LOCALENICE: "Kieli"
+    STATUSNICE: "Tila"
+    STATUS_ACCEPTED: "Hyväksytty"
+    STATUS_REJECTED: "Hylätty"
+    STATUS_DRAFT: "Luonnos"
+    SINGULARNAME_ADJECTIVE: "Käännetty"
+    CREATOR: "Luonut"
+  S2Hub\TextAssistant\Controllers\TranslationAdmin:
+    MENUTITLE: "Käännökset"
+  S2Hub\TextAssistant\Forms\GridField\TranslationActionContainerObjectItemRequest:
+    PUBLISH: "Julkaise"
+    PUBLISH_MESSAGE: "Julkaistu {Name}"
+  S2Hub\TextAssistant\Forms\GridField\BulkManager\TranslationActionContainerObjectPublishHandler:
+    TITLE: "Julkaise"
+    MESSAGE: "Julkaistu {Count} kohdetta."
+  S2Hub\TextAssistant\Forms\GridField\BulkManager\TranslationActionContainerObjectSendToProofReader:
+    TITLE: "Lähetä oikolukuun"
+    MESSAGE: "Lähetetty {Count} kohdetta oikoluettavaksi."
+  S2Hub\TextAssistant\BatchActions\CMSBatchAction_Translate:
+    TITLE: "Käännä AI:lla"
+  S2Hub\TextAssistant\Forms\GridField\BulkManager\FluentObjectTranslationHandler:
+    TITLE: "Käännä AI:lla"
+    FROMLOCALE: "Lähtökieli"
+  S2Hub\TextAssistant\Forms\TranslationAdminInformationField:
+    READY_TRANSLATIONS: "Valmiit käännökset"
+    ITEMS_WAITING: "Artikkelit odottavat julkaisua"
+  S2Hub\TextAssistant\Forms\BatchActions_TranslateForm:
+    TITLE: "Käännä AI:lla - Vaihtoehdot"
+    STARTTRANSLATION: "Aloita käännös"
+    STARTED: "Käännökset on aloitettu"
+    SITESETTINGS: "Sivuston asetukset"
+    TRANSLATEFROM: "Käännä kielestä"
+    TRANSLATETO: "Käännä kieleen"
+    SAMELOCALE: "Ei voi kääntää samaan kieleen"
+    NOIDS: "Ei valittuja sivuja"
+  S2Hub\TextAssistant\ORM\TranslationRelation:
+    PIECES: "kpl"
+  S2Hub\TextAssistant\Models\TranslateFilter:
+    SINGULARNAME: "Käännössuodatin"
+    PLURALNAME: "Käännössuodattimet"
+    TEXT: "Teksti"
+    CHANGETO: "Tekstin pitäisi muuttua"
+    TYPE: "Tyyppi"
+    ACTION: "Toiminto"
+    TYPE_CHANGE: "Muuta teksti"
+    TYPE_DONTTRANSLATE: "Älä käännä tekstiä"
+    TEXT_REQUIRED: "Teksti on pakollinen"
+    CHANGETO_REQUIRED: "\"Tekstin pitäisi muuttua\" on pakollinen"
+  S2Hub\TextAssistant\Forms\GridField\TranslationAdminInstructionsButton:
+    INSTRUCTIONS: "Ohjeet"
+    STEP_1: "Tämä opas ohjaa sinut läpi sivujen kääntämisen AI:n avulla.<br><br>Tässä tilassa sinun tarvitsee vain painaa \"Seuraava\" käydäksesi läpi oppaan.<br/><br/>Jos haluat keskeyttää oppaan, voit painaa ESC milloin tahansa tai rastin ruudun oikeassa yläkulmassa."
+    STEP_2: "Ensimmäiseksi meidän on navigoitava kohtaan \"Sivut\".<br/><br/>Paina \"Seuraava\" jatkaaksesi."
+    STEP_3: "Seuraava askel on painaa \"Toiminnot\". Tällä painikkeella voit suorittaa toiminnon nopeasti monilla sivuilla. </br></br>Paina \"Seuraava\" jatkaaksesi."
+    STEP_4: "Tässä avattavassa valikossa valitse \"Käännä AI:lla\". Oppaassa olemme valinneet tämän automaattisesti sinulle.<br/><br>Paina \"Seuraava\" jatkaaksesi."
+    STEP_5: "Nyt voit rastittaa kaikki sivut, jotka haluat kääntää.<br/>Tässä esimerkissä rastitamme ensimmäisen sivun automaattisesti. </br></br>Paina \"Seuraava\" jatkaaksesi."
+    STEP_6: "Kun olet valinnut sivut, jotka haluat kääntää, seuraava askel on painaa tästä."
+    STEP_7: "Nyt avautuu ruutu, jossa voit tehdä valintoja siitä, mitä haluat kääntää, tämä ruutu antaa sinulle myös yleiskuvan siitä, mitä tullaan kääntämään."
+    STEP_8: "Tässä voit valita, minkä kielen pohjalta käännös tehdään ja mille kielelle se käännetään. Suosittelemme, että valitset \"Käännä kielestä\"-kohdassa kielen, jolla on parhaat materiaalit."
+    STEP_9: "Tässä näkyy, että tämä sivu tullaan kääntämään.</br></br>Saat itse tehdä valinnan, pitäisikö lohkot kääntää vai ei.</br></br>Jotkin sivut saattavat tarjota tässä lisävaihtoehtoja lohkojen lisäksi, joten suosittelemme tarkastelemaan huolellisesti tässä mahdollisesti olevia valintoja. Oletuksena on aina, että lohkot käännetään.</br></br>Kaikki sivut, jotka olet aiemmin rastittanut, näkyvät tässä."
+    STEP_10: "Lopuksi, kun olet tehnyt valintasi, voit aloittaa käännöksen painamalla tästä.<br/><br/>Kun painat tästä, käynnistyy taustaprosessi, joka kääntää sivut, ja sinut ohjataan automaattisesti kohtaan \"Käännökset\", jossa näet tämän tilan.<br/><br/>Taustaprosessin ollessa käynnissä voit jatkaa admin-työkalun käyttöä normaalisti.</br></br>Paina \"Seuraava\" jatkaaksesi."
+    STEP_11: "Valmiit käännökset eivät julkaise automaattisesti, vaan ne lisätään \"Käännökset\"-listaan. Siellä voit tarkastella, muuttaa tarvittaessa ja lopulta julkaista ne.<br/><br/>Tämä on oppaan viimeinen vaihe ja kun painat \"Sulje\", opas päättyy ja voit jatkaa admin-työkalun käyttöä normaalisti."
+    NEXT: "Seuraava"
+    DONE: "Sulje"
+  S2Hub\TextAssistant\Models\OpenAIModuleSettings:
+    SINGULARNAME: "Asetus"
+    PLURALNAME: "Asetukset"
+    CONTEXTFORAI: "Kontekstitieto tekoälylle"
+    CONTEXTFORAI_RIGHTTITLE: "Tätä tekstiä käytetään antamaan tekoälylle konteksti, jotta se voi tuottaa parempia käännöksiä. Kirjoita lyhyt kuvaus yrityksestäsi sekä tarjoamistasi tuotteista ja palveluista."
+  S2Hub\TextAssistant\Models\TextAssistantSettings:
+    SINGULARNAME: 'Asetukset'
+    PLURALNAME: 'Asetukset'

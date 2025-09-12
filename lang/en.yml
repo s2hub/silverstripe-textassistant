@@ -1,0 +1,31 @@
+en:
+  S2Hub\TextAssistant\Extensions\FormFieldExtension:
+    TRANSLATE: 'Translate'
+    TRANSLATEFROM: 'Translate from'
+    TRANSLATETO: 'Translate to'
+    CONTENT: 'Text'
+    GENERATE: 'Generate'
+    OK: 'Use text'
+    SUMMARIZECONTENT: 'Summarize the content of the field "{field}"'
+    GENERATECONTENTFROMTITLE: 'Generate text based on the title "{title}"'
+    GENERATECONTENTFROMTITLEANDSHORTDESC: 'Generate text based on the title "{title}" and short description'
+    WORDCOUNT: 'Word count'
+    TRANSLATED_VIA_AI: "This text was translated via AI."
+  S2Hub\TextAssistant\Forms\GridField\TranslationAdminInstructionsButton:
+    INSTRUCTIONS: "Instructions"
+    STEP_1: "This guide will guide you through how to translate pages with AI.<br><br>In this mode, you only need to press \"Next\" to go through the guide.<br/><br/>If you want to cancel the guide, you can press ESC at any time or the cross in the upper right corner of the box."
+    STEP_2: "First, we need to navigate to \"Pages\".<br/><br/>Press \"Next\" to continue."
+    STEP_3: "The next step is to press \"Actions\". With this button, you can perform an action on many pages quickly. </br></br>Press \"Next\" to continue."
+    STEP_4: "In this dropdown menu, select \"Translate with AI\". In the guide, we have chosen this automatically for you.<br/><br>Press \"Next\" to continue."
+    STEP_5: "Now you can check all the pages you want to translate.<br/>In this example, we automatically check the first page. </br></br>Press \"Next\" to continue."
+    STEP_6: "Once you have chosen the pages you want to translate, the next step is to press here."
+    STEP_7: "A box now opens where you can make choices about what you want to translate, this box also gives you an overview of what will be translated."
+    STEP_8: "Here you get to choose which language to use as the basis for the translation and to which language it should be translated to. We recommend that you choose the language you have the best material on for \"Translate from\"."
+    STEP_9: "Here it is shown that this page will be translated.</br></br>You get to make the choice if the blocks should be translated or not.</br></br>Some pages may have extra options here in addition to the blocks, so we recommend you look carefully through the choices that may be here. By default, it is always checked that the blocks should be translated.</br></br>All pages you have checked earlier will be displayed here."
+    STEP_10: "Finally, when you have made your choices, you can start the translation by pressing here.<br/><br/>When you press here, a background process starts that translates the pages, and you are automatically redirected to \"Translations\" where you can see the status of this.<br/><br/>While this background process is ongoing, you can continue to use the admin tool as usual.</br></br>Press \"Next\" to continue."
+    STEP_11: "Translations that are completed are not published automatically, but are added to the list in \"Translations\". There you can review, change if necessary, and finally publish them.<br/><br/>This is the last step in the guide and when you press \"Close\", it will end and you can continue to use the admin tool as usual."
+    NEXT: "Next"
+    DONE: "Close"
+  S2Hub\TextAssistant\Models\TextAssistantSettings:
+    SINGULARNAME: 'Settings'
+    PLURALNAME: 'Settings'
