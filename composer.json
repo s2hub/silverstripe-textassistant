@@ -1,0 +1,31 @@
+{
+    "name": "s2hub/silverstripe-textassistant",
+    "description": "Text assistant module, for generating translations and texts via LLM integrations",
+    "type": "silverstripe-vendormodule",
+    "homepage": "https://www.s2-hub.com/",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "silverstripe",
+        "textassistant"
+    ],
+    "authors": [
+        {
+            "name": "Creamarketing",
+            "homepage": "https://www.creamarketing.com"
+        },
+        {
+            "name": "S2-Hub",
+            "homepage": "https://www.s2-hub.com/"
+        }
+    ],
+    "require": {
+        "silverstripe/framework": "^5"
+    },
+    "autoload": {
+        "psr-4": {
+            "S2Hub\\TextAssistant\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
