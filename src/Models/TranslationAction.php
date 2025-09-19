@@ -8,7 +8,6 @@ use SilverStripe\ORM\DataObject;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Security\Member;
 use SilverStripe\Security\Security;
-use SilverStripe\View\Requirements;
 use TractorCow\Fluent\Model\Locale;
 use SilverStripe\Forms\ListboxField;
 use SilverStripe\Forms\TextareaField;
@@ -48,6 +47,8 @@ class TranslationAction extends DataObject
         'Status' => 'Enum("Draft, Accepted","Accepted")',
 
         'PublishedPlace' => 'Enum("TranslationAdmin, Default","Default")',
+
+        'Value' => 'Text',
     ];
 
     private static $has_one = [
@@ -80,7 +81,7 @@ class TranslationAction extends DataObject
     {
         $fields = new FieldList();
 
-        $originObj = $this->owner->Object();
+        $originObj = $this->Object();
 
         $originFields = $originObj->getCMSFields()->dataFields();
 
@@ -100,25 +101,25 @@ class TranslationAction extends DataObject
 
         $fieldClass = get_class($originalField);
 
-        $fromValueLabel = $this->owner->getFieldNameTranslation();
-        $toValueLabel = $this->owner->getFieldNameTranslation() . " (" . _t(TranslationAction::class.'.SINGULARNAME', 'Translation') . ")";
+        $fromValueLabel = $this->getFieldNameTranslation();
+        $toValueLabel = $this->getFieldNameTranslation() . " (" . _t(TranslationAction::class.'.SINGULARNAME', 'Translation') . ")";
 
         $fromValueTranslatableContainer = new TranslatableDataObjectField();
         $fromValueTranslatableContainer->setName("FromValue");
-        $fromValueTranslatableContainer->setDefaultLocale($this->owner->FromLocale);
+        $fromValueTranslatableContainer->setDefaultLocale($this->FromLocale);
 
         $allowedLocales = array_flip(Locale::getCached()->column('Locale'));
-        unset($allowedLocales[$this->owner->Locale]);
+        unset($allowedLocales[$this->Locale]);
 
         foreach ($allowedLocales as $locale => $null) {
-            $value = $this->owner->getField("Value_" . $locale);
+            $value = $this->getField("Value_" . $locale);
 
             // Only show a before-translation if the value is not empty
             if (empty($value)) {
                 continue;
             }
 
-            $field = new $fieldClass($this->owner->FieldName . '_'. $locale, $fromValueLabel);
+            $field = new $fieldClass($this->FieldName . '_'. $locale, $fromValueLabel);
 
             $field->setValue($value);
             
@@ -146,9 +147,9 @@ class TranslationAction extends DataObject
         }
 
         $toValueField = new $fieldClass(
-            "TranslationAction[".$this->owner->ID."][".$this->owner->FieldName . '_'.$this->owner->Locale."]",
+            "TranslationAction[".$this->ID."][".$this->FieldName . '_'.$this->Locale."]",
             DBHTMLText::create()->setValue($toValueLabel),
-            $this->owner->getField("Value_" . $this->owner->Locale)); 
+            $this->getField("Value_" . $this->Locale)); 
 
 
             
@@ -164,8 +165,6 @@ class TranslationAction extends DataObject
             }
         }
 
-
-        Requirements::css("vendor/s2hub/silverstripe-textassistant/client/dist/styles/TranslationAction.css");
 
         $fromValueContainer = CompositeField::create([$fromValueTranslatableContainer])->addExtraClass('translation-action-from-value-container');
         $toValueContainer = CompositeField::create([$toValueField])->addExtraClass('translation-action-to-value-container');
@@ -432,10 +431,10 @@ class TranslationAction extends DataObject
 
     public function getFromToLocale()
     {
-        if (empty($this->owner->FromLocale)) {
-            return DBHTMLText::create()->setValue($this->owner->getLocaleNice($this->owner->Locale));
+        if (empty($this->FromLocale)) {
+            return DBHTMLText::create()->setValue($this->getLocaleNice($this->Locale));
         } else {
-            return DBHTMLText::create()->setValue($this->owner->getLocaleNice($this->owner->FromLocale) . " &rarr; " . $this->owner->getLocaleNice($this->owner->Locale));
+            return DBHTMLText::create()->setValue($this->getLocaleNice($this->FromLocale) . " &rarr; " . $this->getLocaleNice($this->Locale));
 
         }
 
@@ -466,5 +465,29 @@ class TranslationAction extends DataObject
 
 
         return false;
+    }
+
+    public function getField($field)
+    {
+        if (substr($field, 0, 6) === "Value_") {
+            $locale = substr($field, 6);
+            $currentValue = json_decode($this->Value ?: "", true);
+            return $currentValue[$locale] ?? null;
+        }
+
+        return parent::getField($field);
+    }
+
+    public function setField($fieldName, $val)
+    {
+        if (substr($fieldName, 0, 6) === "Value_") {
+            $locale = substr($fieldName, 6);
+            $currentValue = json_decode($this->Value ?: "", true);
+            $currentValue[$locale] = $val;
+            $val = json_encode($currentValue);
+            $fieldName = 'Value';
+        }
+
+        return parent::setField($fieldName, $val);
     }
 }

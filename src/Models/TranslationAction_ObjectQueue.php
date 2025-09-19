@@ -49,7 +49,7 @@ class TranslationAction_ObjectQueue extends DataObject
         }
 
         if (self::$insert === null) {
-            self::$insert = new SQLInsert("TranslationAction_ObjectQueue");
+            self::$insert = new SQLInsert(DataObject::getSchema()->tableName(self::class));
         }
 
         foreach ($ids as $id) {

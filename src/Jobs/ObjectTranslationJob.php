@@ -93,7 +93,7 @@ class ObjectTranslationJob extends AbstractQueuedJob
 
         // Delete the TranslationAction_ObjectQueue now since it's processed
         // we're intentionally not using GroupIdentifier here so if obj was re-queued it'll just be ignored
-        SQLDelete::create("TranslationAction_ObjectQueue", [
+        SQLDelete::create(DataObject::getSchema()->tableName(TranslationAction_ObjectQueue::class), [
             'ObjectID' => $item['id'],
             'ObjectClass' => $item['class'],
         ])->execute();
